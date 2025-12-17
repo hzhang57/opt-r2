@@ -91,11 +91,10 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--vlm", type=str, default="Qwen/Qwen3-VL-4B-Instruct")
+    #parser.add_argument("--vlm", type=str, default="Qwen/Qwen3-VL-4B-Instruct")
     #parser.add_argument("--vlm", type=str, default="Qwen/Qwen3-VL-30B-A3B-Instruct")
     #parser.add_argument("--vlm", type=str, default="Qwen/Qwen3-VL-32B-Instruct")
     #parser.add_argument("--vlm", type=str, default="Qwen/Qwen3-VL-8B-Instruct")
-    #parser.add_argument("--vlm", type=str, default="Qwen/Qwen3-VL-8B-Thinking")
     parser.add_argument("--oc-dataset", type=str, default="../../data_repo/MMStar.tsv")
     parser.add_argument("--output_path", type=str, default="../dataset/new_hard_options.json")
     args = parser.parse_args()

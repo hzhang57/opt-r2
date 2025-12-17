@@ -1,12 +1,12 @@
 #!/bin/bash
 export CUDA_VISIBLE_DEVICES=3
 CKPT=result_zs
-ORI_OR_NEW=1 # 0 for ori, 1 for gda
+ORI_OR_NEW=0 # 0 for ori, 1 for gda
 DATA_SET="MMStar"
 IMAGE_FOLDER="../data_repo/K0_mmstar_images/"
-QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_4B_Instruct.json")
+#QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_4B_Instruct.json")
 #QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_30B_A3B_Instruct.json")
-#QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_32B_Instruct.json")
+QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_32B_Instruct.json")
 #QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_8B_Instruct.json")
 
 # Define the models to loop over
@@ -14,8 +14,14 @@ QUESTION_FILES=("../data_repo/K1_mmstar_hard_options_Qwen3_VL_4B_Instruct.json")
 #MODEL_PATHES=("Qwen/Qwen2.5-VL-3B-Instruct")
 #MODEL_PATHES=("OpenBMB/MiniCPM-V-2_6")
 #MODEL_PATHES=("OpenGVLab/InternVL3_5-4B")
+#MODEL_PATHES=("deepseek-ai/Janus-1.3B")
+#MODEL_PATHES=("AI-ModelScope/llava-v1.6-mistral-7b")
+#MODEL_PATHES=("mistralai/Ministral-3-3B-Base-2512")
 
-MODEL_PATHES=("deepseek-ai/Janus-1.3B")
+
+#MODEL_PATHES=("Qwen/Qwen3-VL-4B-Instruct")
+#MODEL_PATHES=("Qwen/Qwen3-VL-8B-Instruct")
+MODEL_PATHES=("Qwen/Qwen3-VL-30B-A3B-Instruct")
 
 #MODEL_PATHES=("lmms-lab/LLaVA-OneVision-1.5-4B-Instruct")
 #MODEL_PATHES=("OpenBMB/MiniCPM-V-4_5")
