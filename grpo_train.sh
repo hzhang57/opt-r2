@@ -4,8 +4,8 @@
 #    --model Qwen/Qwen2.5-VL-3B-Instruct \
 #MAX_PIXELS=262144 \
 WANDB_API_KEY=e15fbbc857d13f6f81dc158724b3bbf8f7dbce2e \
-CUDA_VISIBLE_DEVICES=1,2,6 \
-NPROC_PER_NODE=3 \
+CUDA_VISIBLE_DEVICES=1,2,3,4,5 \
+NPROC_PER_NODE=5 \
 MAX_PIXELS=262144 \
 MASTER_PORT=29600 \
 swift rlhf \
@@ -16,12 +16,12 @@ swift rlhf \
     --use_vllm true \
     --vllm_mode server \
     --vllm_server_host 127.0.0.1 \
-    --vllm_server_port 8001 \
+    --vllm_server_port 8000 \
     --train_type full \
     --torch_dtype bfloat16 \
     --dataset 'lmms-lab/multimodal-open-r1-8k-verified' \
     --load_from_cache_file true \
-    --max_completion_length 1024 \
+    --max_completion_length 512 \
     --num_train_epochs 1 \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 8 \
